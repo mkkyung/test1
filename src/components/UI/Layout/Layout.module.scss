@@ -1,0 +1,74 @@
+@import 'styles/utils.scss';
+
+.LayoutBack {
+  @include ArrangeCenter();
+  .Layout {
+    height: 90%;
+    width : 90%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width : 1300px) and (min-height : 700px) {
+  .LayoutBack {
+      height: 100vh;
+  }
+}
+@media screen and (min-width : 1024px) and (min-height : 695px) {
+  .LayoutBack {
+      height: 100vh;
+    .Layout {
+      flex-direction: row;
+      margin : 0;
+    }
+  }
+}
+
+.Detail {
+  .Layout {
+    margin: 20px 0;
+  }
+}
+.List {
+  height: 100%;
+  .Layout {
+    margin: 20px 0;
+  }
+}
+.Editor {
+  height: 100%;
+  .Layout {
+    margin: 20px 0;
+  }
+}
+@media screen and (min-width : 1300px) and (min-height : 700px) {
+  .Editor {
+      height: 100vh;
+  }
+}
+@media screen and (min-width : 1024px) and (min-height : 695px) {
+  .Editor {
+      height: 100vh;
+    .Layout {
+      flex-direction: row;
+      margin : 0;
+    }
+  }
+}
+.Attendance {
+  .Layout {
+    margin : 20px 0;
+  }
+}
+
+.Notice {
+  height: 100%;
+  .Layout {
+    margin : 20px 0;
+  }
+}
+@media screen and (min-width : 1300px) and (min-height : 1000px) {
+  .Notice {
+    height: 100vh;
+  }
+}
