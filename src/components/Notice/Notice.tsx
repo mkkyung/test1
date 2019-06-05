@@ -1,6 +1,6 @@
 import React from 'react';
 import NoticeBoard from 'components/UI/NoticeBoard';
-const Board = () => {
+const Board: React.FC = () => {
   return (
     <>
       <NoticeBoard/>

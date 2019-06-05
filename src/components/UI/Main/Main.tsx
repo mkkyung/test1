@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Main.module.scss';
 import MainHeaderContainer from 'containers/MainHeaderContainer';
-const Main = ({children}) => {
+const Main: React.FC = ({children}) => {
   return (
     <main>
       <section className = {classes.SectionHeader}>

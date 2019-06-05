@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './MainContentsSubHeader.module.scss';
 
-const MainContentsSubHeader = () => {
+const MainContentsSubHeader: React.FC = () => {
 
   return (
     <div className = {classes.SubHeaderWrapper}>

@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './NoticeItem.module.scss';
 
-const NoticeItem = () => {
+const NoticeItem: React.FC = () => {
 
   return (
     <>

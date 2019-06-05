@@ -2,7 +2,7 @@ import React from 'react';
 import MainWorkerDetailInfo from 'components/UI/Main/MainWorkerDetailInfo';
 import MainContentsSubHeader from 'components/UI/Main/MainContentsSubHeader';
 
-const WorkerInfoDetail = ({staffInfo})=> {
+const WorkerInfoDetail: React.FC = ({staffInfo})=> {
   return (
     <>
       <MainContentsSubHeader/>

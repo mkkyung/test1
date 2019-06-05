@@ -1,7 +1,7 @@
 import React from 'react' ;
 import classes from './MainWorkerDetailInfo.module.scss';
 
-const MainWorkerDetailInfo = ({staffInfo}) => {
+const MainWorkerDetailInfo: React.FC = ({staffInfo}) => {
   console.log(staffInfo);
   if(staffInfo !== []) {
     return (

@@ -2,7 +2,7 @@ import React from 'react';
 import MainWorkerInfoAttendance from 'components/UI/Main/MainWorkerInfoAttendance';
 import MainContentsSubHeader from 'components/UI/Main/MainContentsSubHeader';
 
-const WorkerInfoAttendance = () => {
+const WorkerInfoAttendance: React.FC = () => {
   return (
     <>
       <MainContentsSubHeader/>

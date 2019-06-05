@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './ErrorPage.module.scss';
 
-const ErrorPage = () => {
+const ErrorPage: React.FC = () => {
 
   return (
     <>

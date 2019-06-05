@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './NoticeBoard.module.scss';
 import NoticeItem from './NoticeItem';
 import PageNation from './NoticePageNation';
-const NoticeBoard = () => {
+const NoticeBoard: React.FC = () => {
 
   return (
     <div className = {classes.BoardWrapper}>

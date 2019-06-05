@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './MainContentsHeader.module.scss';
-const MainContentsHeader = () => {
+const MainContentsHeader: React.FC = () => {
   return (
     <div className = {classes.ContentsHeader}>
       <div className = {classes.Worker}>

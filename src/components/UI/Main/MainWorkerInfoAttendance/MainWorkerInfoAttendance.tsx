@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './MainWorkerInfoAttendance.module.scss';
 
-const MainWorkerInfoAttendance = () => {
+const MainWorkerInfoAttendance: React.FC = () => {
   // let attacedClassNames = [classes.YearVacation,classes.YearVacationCnt]
   return (
     <div className = {classes.InputWrapper}> 

@@ -3,7 +3,7 @@ import classes from './WorkersList.module.scss';
 import ListInfoContainer from 'containers/WorkerInfoContainer';
 const WorkersList = ({staffList}) => {
 
-  const listOfStaff = staffList.map((staff) => {
+  const listOfStaff: React.FC = staffList.map((staff) => {
     return (
       <ListInfoContainer
           staff = {staff}

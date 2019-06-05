@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Home.module.scss';
 import Button from '../UI/Button/Button';
 
-const Home = () => {
+const Home: React.FC = () => {
     
   return (
     <div className={classes.Home_box}>

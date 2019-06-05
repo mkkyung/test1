@@ -1,6 +1,6 @@
 import React from 'react';
 import EditorComponent from 'components/UI/EditorComponent'
-const Editor = () => {
+const Editor: React.FC = () => {
 
   return (
     <>

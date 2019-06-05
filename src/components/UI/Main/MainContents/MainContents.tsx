@@ -4,7 +4,7 @@ import MainContentsHeader from 'components/UI/Main/MainContentsHeader';
 import MainContentsSubHeader from 'components/UI/Main/MainContentsSubHeader';
 //여기에 import
 import MainWorkerDetailInfo from 'components/UI/Main/MainWorkerDetailInfo';
-const MainContents = () => {
+const MainContents: React.FC = () => {
 
   return (
     <div className = {classes.MainContents}>
