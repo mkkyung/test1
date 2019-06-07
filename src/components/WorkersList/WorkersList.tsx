@@ -1,9 +1,14 @@
 import React from 'react';
 import classes from './WorkersList.module.scss';
 import ListInfoContainer from 'containers/WorkerInfoContainer';
-const WorkersList = ({staffList}) => {
 
-  const listOfStaff: React.FC = staffList.map((staff) => {
+interface WorkerListProps {
+  staffList : any
+}
+
+const WorkersList: React.FC<WorkerListProps> = ({staffList}) => {
+
+  const listOfStaff: React.FC = staffList.map((staff:any) => {
     return (
       <ListInfoContainer
           staff = {staff}

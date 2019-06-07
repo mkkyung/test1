@@ -30,7 +30,7 @@ const Home: React.FC = () => {
                 // onChange={this.handleChange}
                 // value={this.state.password}
               />
-              <Button btnType = "login" btnValue = "로그인" />
+              <Button btnType = "login" clicked = {alert()} btnValue = "로그인" />
             </div>            
           </div>
         </div>

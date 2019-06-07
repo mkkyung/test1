@@ -1,7 +1,11 @@
 import React from 'react' ;
 import classes from './MainWorkerDetailInfo.module.scss';
 
-const MainWorkerDetailInfo: React.FC = ({staffInfo}) => {
+interface DetailInfoProps {
+  staffInfo : any
+}
+
+const MainWorkerDetailInfo: React.FC<DetailInfoProps> = ({staffInfo}) => {
   console.log(staffInfo);
   if(staffInfo !== []) {
     return (

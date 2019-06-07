@@ -2,19 +2,23 @@ import React from 'react';
 import classes from './MainHeader.module.scss';
 import { NavLink } from 'react-router-dom';
 import Button from 'components/UI/Button'
-const MainHeader: React.FC = ({working, leaving}) => {
 
+interface MainHeaderProps {
+  working:() => void;
+  leaving:() => void;
+}
+const MainHeader: React.FC<MainHeaderProps> = props => {
   return (
     <div className = {classes.HeaderWrapper}>
       <div className = {classes.Search}>
-        <input type = "text" placeholder = "검색...."/>
+        <input type = "text" placeholder = "Search...."/>
       </div>
       <div className = {classes.Navbar}>
         <nav>
-        <span><NavLink exact to = '/notice'>공지사항</NavLink></span>
+        <span><NavLink exact to = '/notice'>notice</NavLink></span>
         </nav>
-        <Button btnType = 'working' clicked = {working} btnValue = "출근"/>
-        <Button btnType = 'leaving' clicked = {leaving} btnValue = "퇴근"/>
+        <Button btnType = 'working' clicked = {props.working} btnValue = "working"/>
+        <Button btnType = 'leaving' clicked = {props.leaving} btnValue = "leaving"/>
       </div>
     </div>
   )
