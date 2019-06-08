@@ -1,5 +1,5 @@
 import React from 'react';
-// import WorkersListContainer from 'containers/WorkerListContainer';
+import WorkersListContainer from 'containers/WorkersListContainer';
 import Layout from 'components/UI/Layout';
 import MainContentsHeader from 'components/UI/Main/MainContentsHeader';
 import workers from 'libs/staffInfo.json';
