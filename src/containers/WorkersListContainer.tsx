@@ -7,8 +7,11 @@ interface WorkersListProps {
 const WorkersListContainer: React.FC<WorkersListProps> = ({ staffList }) => {
   const [staffs, setStaffs] = useState([]);
   useEffect(() => {
+    console.log(staffList)
     setStaffs(staffList);
   }, []);
+
+  console.log(staffs)
   return <WorkerList staffList={staffs} />;
 };
 export default WorkersListContainer;

@@ -1,16 +1,15 @@
 import React from 'react';
 import Layout from 'components/UI/Layout'
-import WorkerInfoDetailContainer from 'components/WorkerInfoDetail';
+import WorkerInfoDetailContainer from 'containers/WorkerInfoDetailContainer';
 import MainContentsHeader from 'components/UI/Main/MainContentsHeader';
 import workers from 'libs/staffInfo.json';
 
-const workerInfoDetail: React.FC =  () => {
-  console.log(workers);
+const workerInfoDetail: React.FC =  ({match}:any) => {
   return (
     <>
       <Layout pageType = 'Detail' >
         <MainContentsHeader/>
-        <WorkerInfoDetailContainer  staffInfo = {workers}/>
+        <WorkerInfoDetailContainer matchData = {match} workers = {workers}/>
       </Layout>
     </>
   )

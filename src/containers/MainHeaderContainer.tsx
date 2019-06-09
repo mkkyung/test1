@@ -1,10 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import MainHeader from 'components/UI/Main/MainHeader';
 
-interface MainHeaderState {
-  working: boolean;
-}
-const MainHeaderContainer: React.FC<MainHeaderState> = () => {
+const MainHeaderContainer: React.FC<{}> = () => {
   const [working, setWorking] = useState(false);
   const onWorking = useCallback(() => {
     setWorking(true);
