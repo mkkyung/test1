@@ -1,6 +1,8 @@
 import React from 'react';
-import Layout from '../components/UI/Layout';
-import Editor from '../components/Editor';
+import Layout from 'components/UI/Layout';
+import Editor from 'components/Editor';
+
+
 
 const editor: React.FC = () => {
   return (
