@@ -12,10 +12,10 @@ const WorkerInfoDetailContainer: React.FC<DetailContainerProps> = ({
   const [staff, setStaff] = useState();
   let staffId = Number.parseInt(matchData.params.id);
   useEffect(() => {
-    workers.filter((staff:any) => {
-      return staff.id === staffId ? setStaff(staff): null
-    })
+    workers.filter((staff: any) => {
+      return staff.id === staffId ? setStaff(staff) : null;
+    });
   }, [staff]);
-  return <WorkerInFoDetail id = {matchData.params.id} staffInfo = {staff} />;
+  return <WorkerInFoDetail idNumber={matchData.params.id} staffInfo={staff} />;
 };
 export default WorkerInfoDetailContainer;
