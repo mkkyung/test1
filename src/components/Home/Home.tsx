@@ -1,38 +1,103 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import classes from './Home.module.scss';
-import Button from '../UI/Button/Button';
+import { Form, Icon, Input, Button } from 'antd';
+import { FormComponentProps } from 'antd/lib/form';
+import 'antd/dist/antd.css';
+interface LoginFormProps extends FormComponentProps {
+  email?: string;
+}
 
-const Home: React.FC = () => {
+// function hasErrors(fieldsError) {
+//   return Object.keys(fieldsError).some(field => fieldsError[field]);
+// }
+
+const Home: React.FC<LoginFormProps> = ({ form }) => {
+  useEffect(() => {
+    form.validateFields();
+  }, []);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    form.validateFields((err, values) => {
+      if (!err) {
+        console.log('Received values of form: ', values);
+      }
+    });
+  };
+
+  const emailError =
+    form.isFieldTouched('email') && form.getFieldError('email');
+  const passwordError =
+    form.isFieldTouched('password') && form.getFieldError('password');
   return (
     <div className={classes.Home_box}>
       <div className={classes.Home_outbox}>
-        <div className={classes.Home_input}>
-          <div className={classes.Home_content}>
-            <ul className={classes.Home_message}>
-              <li className={classes.Home_message_li}>Welcome Back</li>
-            </ul>
-            <div className={classes.abc}>
-              <input
-                className={classes.Home_input_tag}
-                name="email"
-                type="text"
-                autoFocus
-                placeholder="Email Address"
-                // onChange={this.handleChange}
-                // value={this.state.email}
-              />
-              <input
-                className={classes.Home_input_tag}
-                name="password"
+        <Form onSubmit={handleSubmit}>
+          <Form.Item
+            validateStatus={emailError ? 'error' : ''}
+            help={emailError || ''}
+          >
+            {form.getFieldDecorator('email', {
+              rules: [
+                {
+                  type: 'email',
+                  message: 'fuck',
+                },
+                {
+                  required: true,
+                  message: 'Please input your email!',
+                },
+              ],
+            })(
+              <Input
+                prefix={
+                  <Icon
+                    type="mail"
+                    style={{
+                      color: 'rgba(0,0,0,.25)',
+                    }}
+                  />
+                }
+                placeholder="E-mail"
+              />,
+            )}
+          </Form.Item>
+          <Form.Item
+            validateStatus={passwordError ? 'error' : ''}
+            help={passwordError || ''}
+          >
+            {form.getFieldDecorator('password', {
+              rules: [
+                {
+                  required: true,
+                  message: 'Please input your Password!',
+                },
+              ],
+            })(
+              <Input
+                prefix={
+                  <Icon
+                    type="lock"
+                    style={{
+                      color: 'rgba(0,0,0,.25)',
+                    }}
+                  />
+                }
                 type="password"
                 placeholder="Password"
-                // onChange={this.handleChange}
-                // value={this.state.password}
-              />
-              <Button btnType="login" btnValue="로그인" />
-            </div>
-          </div>
-        </div>
+              />,
+            )}
+          </Form.Item>
+          <Form.Item>
+            <Button
+              type="primary"
+              htmlType="submit"
+              // disabled={hasErrors(form.getFieldsError())}
+            >
+              Log in
+            </Button>
+          </Form.Item>
+        </Form>
         <div className={classes.Picture}>
           <img
             src="https://dspncdn.com/a1/media/236x/ed/d7/da/edd7dad1071f3c982dd9efab0b68af41.jpg"
@@ -44,4 +109,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default Form.create<LoginFormProps>({})(Home);
