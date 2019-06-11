@@ -20,7 +20,7 @@ const MainWorkerInfoAttendance: React.FC = () => {
         <div className = {classes.FullTimeWorking}>만근횟수(sample)</div>
         <div className = {classes.FullTimeWorkingCnt}>0</div>
         <div className = {classes.StartTime}>출근시간</div>
-        <div classname = {classes.StartTimeLog}>09:00</div>
+        <div className = {classes.StartTimeLog}>09:00</div>
         <div className = {classes.FinishTime}>퇴근시간</div>
         <div className = {classes.FinishTimeLog}>18:00</div>
       </div>

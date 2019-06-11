@@ -13,11 +13,15 @@
     "@types/react-router-dom": "^4.3.3",
     "antd": "^3.19.2",
     "craco-plugin-react-hot-reload": "0.0.3",
+    "eslint-config-prettier": "^4.3.0",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-hot-loader": "^4.9.0",
+    "react-icons": "^3.7.0",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
+    "react-summernote": "^2.0.0",
     "typescript": "^3.5.1"
   },
   "scripts": {
@@ -27,7 +31,15 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "prettier"
+    ],
+    "rules": {
+      "react/prefer-stateless-function": 0,
+      "react/jsx-filename-extension": 0,
+      "react/jsx-one-expression-per-line": 0
+    }
   },
   "browserslist": {
     "production": [

@@ -4,8 +4,11 @@ import Aside from 'components/UI/Aside'
 import Main from 'components/UI/Main';
 
 
+interface LayoutProps {
+  pageType : string
+}
 
-const Layout: React.FC = ({children,pageType}) => {
+const Layout: React.FC<LayoutProps> = ({children,pageType}) => {
   return (
     <div className = {[classes.LayoutBack, classes[pageType]].join(' ')}>
       <div className = {classes.Layout}>

@@ -1,13 +1,18 @@
 import React from 'react';
 import MainWorkerInfoAttendance from 'components/UI/Main/MainWorkerInfoAttendance';
 import MainContentsSubHeader from 'components/UI/Main/MainContentsSubHeader';
-
-const WorkerInfoAttendance: React.FC = () => {
+interface AttendanceContainerProps {
+  matchData: any;
+  workers: any;
+}
+const WorkerInfoAttendance: React.FC<AttendanceContainerProps> = ({
+  matchData,
+}) => {
   return (
     <>
-      <MainContentsSubHeader/>
-      <MainWorkerInfoAttendance/>
+      <MainContentsSubHeader id={matchData.params.id} />
+      <MainWorkerInfoAttendance />
     </>
-  )
-}
+  );
+};
 export default WorkerInfoAttendance;
