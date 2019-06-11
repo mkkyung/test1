@@ -19,9 +19,6 @@ ul, ol {
 button {
   cursor: pointer;
 }
-a {
-  font-size: 1.2rem;
-}
 a, a:hover {
   text-decoration: none;
   color: black;

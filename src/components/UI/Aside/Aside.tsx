@@ -4,8 +4,12 @@ import UserInfo from 'components/UI/UserInfo';
 
 const Aside: React.FC = () => {
 
+  const styles:Object = {
+    "flex": "1",
+    "backgroundColor" : "#2A58AD"
+  }
   return (
-    <aside>
+    <aside style= {styles}>
       <UserInfo/>
     </aside>
   )

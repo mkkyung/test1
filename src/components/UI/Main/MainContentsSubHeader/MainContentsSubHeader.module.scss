@@ -4,19 +4,25 @@
 .SubHeaderWrapper {
   display: flex;
   height: 40px;
+
   .Line {
     border-bottom: 0.5px solid $inputContent;
-    width : calc(100% - 120px);
+    width: calc(100%);
   }
+
   .CurPage {
-    display : flex;
-    width : 120px;
-    color : $curPageName;
+    display: flex;
+    width: 200px;
+    color: $curPageName;
     justify-content: space-between;
-    font-weight: 600;
-    span {
-      border-bottom: 2px solid $curPageName;
-      letter-spacing: 2px;
+    a {
+      display: flex;
+      font-weight: 600;
+      span {
+        border-bottom: 2px solid $curPageName;
+        letter-spacing: 2px;
+        // height: 40px;
+      }
     }
   }
 }

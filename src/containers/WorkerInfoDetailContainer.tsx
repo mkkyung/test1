@@ -1,28 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import WorkerInFoDetail from 'components/WorkerInfoDetail';
-import workers from 'libs/staffInfo.json';
 
 interface DetailContainerProps {
   matchData: any;
-  workers: {};
+  workers: any;
 }
 const WorkerInfoDetailContainer: React.FC<DetailContainerProps> = ({
   matchData,
   workers,
 }) => {
-  const [staffList, setStaffList] = useState();
-  console.log(matchData);
-  console.log(workers);
-  let staffInfo
+  const [staff, setStaff] = useState();
   let staffId = Number.parseInt(matchData.params.id);
   useEffect(() => {
-    setStaffList(workers);
-    return console.log(staffList)
-  }, []);
-
-  const mappingStaffList = () => {
-    
-  }
-  return <div />;
+    workers.filter((staff:any) => {
+      return staff.id === staffId ? setStaff(staff): null
+    })
+  }, [staff]);
+  return <WorkerInFoDetail id = {matchData.params.id} staffInfo = {staff} />;
 };
 export default WorkerInfoDetailContainer;

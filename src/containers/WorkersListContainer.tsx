@@ -9,7 +9,7 @@ const WorkersListContainer: React.FC<WorkersListProps> = ({ staffList }) => {
   useEffect(() => {
     console.log(staffList)
     setStaffs(staffList);
-  }, []);
+  }, [staffList]);
 
   console.log(staffs)
   return <WorkerList staffList={staffs} />;

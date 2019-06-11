@@ -3,7 +3,7 @@ import classes from './Button.module.scss';
 
 interface ButtonProps {
   btnType: string,
-  clicked: any,
+  clicked?: any,
   btnValue: string
 }
 
