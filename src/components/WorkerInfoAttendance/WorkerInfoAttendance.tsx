@@ -2,16 +2,27 @@ import React from 'react';
 import MainWorkerInfoAttendance from 'components/UI/Main/MainWorkerInfoAttendance';
 import MainContentsSubHeader from 'components/UI/Main/MainContentsSubHeader';
 interface AttendanceContainerProps {
-  matchData: any;
-  workers: any;
+  idNumber: any;
+  staffInfo: any;
 }
 const WorkerInfoAttendance: React.FC<AttendanceContainerProps> = ({
-  matchData,
+  idNumber,
+  staffInfo,
 }) => {
   return (
     <>
-      <MainContentsSubHeader id={matchData.params.id} />
-      <MainWorkerInfoAttendance />
+      <MainContentsSubHeader id={idNumber} />
+      {staffInfo === undefined ? (
+        <MainWorkerInfoAttendance />
+      ) : (
+        <MainWorkerInfoAttendance
+          totalYV={<p>{staffInfo.total_year_vacation}</p>}
+          usedYV={<p>{staffInfo.year_vacation}</p>}
+          leftYV={
+            <p>{staffInfo.total_year_vacation - staffInfo.year_vacation}</p>
+          }
+        />
+      )}
     </>
   );
 };
